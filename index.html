@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>НоМа Изумруд — салон красоты в Обнинске</title>
+  <meta name="description" content="Стрижки, окрашивание, маникюр, брови и ресницы. Онлайн-запись в салон красоты НоМа Изумруд, ул. Поленова, 6.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="top">
+    <a class="top__logo" href="#">НоМа Изумруд</a>
+    <nav class="top__nav" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#booking">Запись</a>
+      <a href="#contacts">Как найти</a>
+    </nav>
+    <a class="btn btn--gem" href="#booking">Записаться</a>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1 class="hero__title">
+        <span>НоМа</span>
+        <span>Изумруд</span>
+      </h1>
+
+      <a class="gem" href="#booking">
+        <span class="gem__text">Записаться онлайн</span>
+      </a>
+
+      <ul class="hero__facts">
+        <li>Салон красоты на Поленова, 6</li>
+        <li>Волосы, ногти, брови и ресницы</li>
+        <li>Свободное время видно сразу</li>
+      </ul>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services__head">
+        <h2 class="h2">Услуги и цены</h2>
+        <figure class="ph services__ph">
+          <figcaption>
+            <b>Фото:</b> интерьер салона — рабочее место мастера с зеркалом,
+            зелёные акценты, мягкий дневной свет.
+          </figcaption>
+        </figure>
+      </div>
+      <div class="price" data-price></div>
+    </section>
+
+    <section class="booking" id="booking">
+      <h2 class="h2 booking__title">Онлайн-запись</h2>
+
+      <form class="booking__form" data-booking novalidate>
+        <div class="booking__steps">
+
+          <fieldset class="step">
+            <legend class="step__title"><span class="step__num">1</span> Услуга</legend>
+            <div class="chips" data-services></div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step__title"><span class="step__num">2</span> Мастер</legend>
+            <div class="chips" data-masters></div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step__title"><span class="step__num">3</span> Дата и время</legend>
+            <div class="days" data-days></div>
+            <div class="times" data-times></div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step__title"><span class="step__num">4</span> Контакты</legend>
+            <div class="fields">
+              <label class="field">
+                <span>Имя</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>Телефон</span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="+7 ___ ___-__-__" required data-phone>
+              </label>
+              <label class="field field--wide">
+                <span>Пожелания</span>
+                <textarea name="comment" rows="2" placeholder="Например, хочу обсудить цвет перед окрашиванием"></textarea>
+              </label>
+            </div>
+            <label class="check">
+              <input type="checkbox" name="agree" required>
+              <span>Согласна(-ен) на обработку персональных данных для записи</span>
+            </label>
+          </fieldset>
+
+        </div>
+
+        <aside class="summary" aria-live="polite">
+          <h3 class="summary__title">Ваша запись</h3>
+          <dl class="summary__list">
+            <dt>Услуга</dt>
+            <dd data-sum-service>не выбрана</dd>
+            <dt>Мастер</dt>
+            <dd data-sum-master>любой свободный</dd>
+            <dt>Когда</dt>
+            <dd data-sum-time>не выбрано</dd>
+            <dt>Стоимость</dt>
+            <dd data-sum-price>—</dd>
+          </dl>
+          <p class="summary__error" data-error role="alert"></p>
+          <button class="btn btn--gem btn--wide" type="submit" data-submit>Записаться</button>
+          <p class="summary__hint">Администратор перезвонит, чтобы подтвердить запись.</p>
+        </aside>
+      </form>
+
+      <div class="booking__done" data-done hidden>
+        <p class="booking__done-title">Вы записаны</p>
+        <p data-done-text></p>
+        <button class="btn btn--line" type="button" data-again>Записаться ещё раз</button>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="contacts__info">
+        <h2 class="h2">Как найти</h2>
+        <p class="contacts__addr">Обнинск, улица Поленова, 6</p>
+        <p>От остановки «Школа № 18» — около 5 минут пешком.</p>
+        <!-- Сюда добавить телефон и часы работы салона -->
+      </div>
+      <div class="contacts__map">
+        <iframe
+          title="НоМа Изумруд на карте"
+          src="https://yandex.ru/map-widget/v1/?ll=36.577828%2C55.130844&amp;z=17&amp;pt=36.577828,55.130844,pm2gnm"
+          loading="lazy"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <span>НоМа Изумруд, Обнинск</span>
+    <span>Концепт сайта — Fieldstone Labs, 2026</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
